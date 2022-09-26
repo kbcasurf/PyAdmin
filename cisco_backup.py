@@ -39,3 +39,11 @@ showver = net_connect.send_command('show ver')
 log_file = open(filename, "a")
 log_file.write(showrun)
 log_file.write("\n")
+log_file.write(showver)
+log_file.write("\n")
+
+# sai do enable do roteador
+net_connect.exit_enable_mode()
+
+# desconecta do roteador
+net_connect.disconnect()
